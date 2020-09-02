@@ -1,0 +1,47 @@
+Flask Nedir?
+
+
+Flask bir python frameworküdür. Bilindiği üzere python hızlıca birşeyler yapmak belli sonuçları zamandan kazanarak ortaya çıkarmak için hayat kurtaran bir dildir.
+Web servislerinde de hızlı sonuç elde etmek için pythonun flask frameworkünden yararlanlabirilir. Flask hem çabuk öğrenilebilen hemde bencmarklarına bakıldığında 
+performansı gayet yüksek bir frameworktür.
+Bu Arada Nedir Bu Web Framework?
+Web framework ölçeklenebilir,güvenilir ve sürdürülebilir web uygulamaları oluştururken hayat kurtaran paket veya modüller içeren bir kütüphane yada koleksiyondur. 
+Türkçe karşılığı çerçevedir. Frameworkler ortak işlemlerde kodu tekrar kullanmayı kolaylaştırır. Kod kalabalığını önler.
+Flask Artıları
+· Son derece esnek
+· Öğrenilmesi ve kullanması kolay
+· Yönlendirme URL’leri kolay
+Ve tabi her şeyden öte Python’nun yorumlanabilir bir dil olması yani derlenmeye ihtiyaç duymaması işlemlerin süresini kısaltan en büyük etken.
+Flask Nasıl Kurulur?
+FLask’ı kurmak için ,aşağıdaki kodu komut satırından çalıştırarak pip ediyoruz.
+
+Pip install Flask
+
+İlk Flask Uygulamamızı Olusturalım
+İlk önce bir kod editörü seçmelisiniz. Daha önceden kullandığınız bir editör olabilir. Benim önerim Visual Studio Code.
+Ardından aşağıda yazdığım kod ile flask kütüphanesini python projemize dahil ediyoruz.
+
+from flask import Flask
+
+Daha sonra Flask sınıfından bir app nesnesi oluşturarak projemizde flask kütüphanesinin özelliklerini kullanacağız.
+
+app=Flask(__name__)
+
+Şimdi nesnemiz üzerinden ilk web sayfamızı oluşturalım. Bu sayfamız Https://localhost/ dizininde aktif olacaktır.
+
+@app.route(“/”)
+def index():
+return “Hello Flask!”
+if “__name__”==”__main__”:
+app.run(debug=True)
+
+Evet yazdığımız bu kod ile ilk sayfamızı “/”dizinde oluşturduk.
+@app.route() fonksiyonu ile sayfalarımızı oluşturuyoruz. 
+Sayfalarımıza vermek istediğimiz adres dizileriniz ise(“/”) şeklinde ifade edebiliyoruz. 
+Def index() fonksiyonu ile return edeceğimiz değerleri sayfamızda görmemizi sağlıyoruz. 
+Burada html sayfası da return edebiliriz. O bize kalmış. 
+Ben örnek olsun diye “Hello Flask!” değerini gönderiyoruz. 
+Ardından yazdığımız if koşulunda projemizi aktifleştirerek çalıştırıyoruz.
+Şimdi yazdığımız python dosyasını kaydedip çalıştıralım. 
+Tarayızıcınızda localhost:5000/ adresine gidin. Ve karşınızda Hello Flask!
+Evet flask ile ilk web sayfanızı yaptınız.
